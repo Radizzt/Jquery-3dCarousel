@@ -5,8 +5,13 @@ $(function(){
     initCarousel();
 
     //carousel swiping
+    $(".box").on("swipeleft", carouselSwipeLeft);
+    $(".box").on("swiperight", carouselSwipeRight);
     $(".container").on("swipeleft", carouselSwipeLeft);
     $(".container").on("swiperight", carouselSwipeRight);
+
+    $(".container").mouseleave(function(){console.log("mouse leave")});
+    $(".container").mouseenter(function(){console.log("mouse in")});
 
 
 });
